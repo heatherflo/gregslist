@@ -1,41 +1,41 @@
-<section class="row">
-<h1 class="text-primary text-center">Cars Page</h1>
+<section class="row bg-success">
+  <h1 class="text-primary text-center">Cars Page</h1>
 </section>
-  <form onsubmit="app.CarsController.createCar()"  class="row bg-white shadow mb-5 rounded">
-    <div class="col-12 text-center my-2">List Your Car</div>
-    <div class="mb-3 col-4">
-      <label for="car-make">Make</label>
-      <input class="form-control" required name="make" type="text" minlength="3" maxlength="20" placeholder="Ford...">
-    </div>
-    <div class="mb-3 col-4">
-      <label for="car-model">Model</label>
-      <input class="form-control" required name="model" type="text" minlength="3" maxlength="20" placeholder="Model T...">
-    </div>
-    <div class="mb-3 col-4">
-      <label for="car-year">Year</label>
-      <input class="form-control" required name="year" type="number" min="1920" max="2024" value="2023">
-    </div>
-    <div class="mb-3 col-4">
-      <label for="car-price">Price [1-100000000000]</label>
-      <input class="form-range" name="price" type="range" min="1" max="100000000000" step="10" value="2023">
-    </div>
-    <div class="mb-3 col-8">
-      <label for="car-image">Picture of Car</label>
-      <input class="form-control" required name="imgUrl" type="url" maxlength="500" placeholder="https://...">
-    </div>
-    <div class="mb-3 col-6">
-      <label for="car-color">Color</label>
-      <input class="form-control" name="color" type="color" >
-    </div>
-    <div class="mb-3 col-6">
-      <label for="car-color">Is it Electric?</label>
-      <input class="form-check-input" name="isElectric" type="checkbox" >
-    </div>
-    <div class="mb-2 col-12 text-end">
-      <!-- <button class="btn">cancel</button> -->
-      <button type="submit" class="btn btn-primary"><i class="mdi mdi-plus"></i>Submit</button>
-    </div>
-  </form>
+<form onsubmit="app.CarsController.createCar()" class="row bg-white shadow mb-5 rounded">
+  <div class="col-12 text-center my-2">List Your Car</div>
+  <div class="mb-3 col-4">
+    <label for="car-make">Make</label>
+    <input class="form-control" required name="make" type="text" minlength="3" maxlength="20" placeholder="Ford...">
+  </div>
+  <div class="mb-3 col-4">
+    <label for="car-model">Model</label>
+    <input class="form-control" required name="model" type="text" minlength="3" maxlength="20" placeholder="Model T...">
+  </div>
+  <div class="mb-3 col-4">
+    <label for="car-year">Year</label>
+    <input class="form-control" required name="year" type="number" min="1920" max="2024" value="2023">
+  </div>
+  <div class="mb-3 col-4">
+    <label for="car-price">Price [1-100000000000]</label>
+    <input class="form-range" name="price" type="range" min="1" max="100000000000" step="10" value="2023">
+  </div>
+  <div class="mb-3 col-8">
+    <label for="car-image">Picture of Car</label>
+    <input class="form-control" required name="imgUrl" type="url" maxlength="500" placeholder="https://...">
+  </div>
+  <div class="mb-3 col-6">
+    <label for="car-color">Color</label>
+    <input class="form-control" name="color" type="color">
+  </div>
+  <div class="mb-3 col-6">
+    <label for="car-color">Is it Electric?</label>
+    <input class="form-check-input" name="isElectric" type="checkbox">
+  </div>
+  <div class="mb-2 col-12 text-end">
+    <!-- <button class="btn">cancel</button> -->
+    <button type="submit" class="btn btn-primary"><i class="mdi mdi-plus"></i>Submit</button>
+  </div>
+</form>
 <section class="row" id="cars-list">
   <!-- Cars will be injected here -->
 </section>

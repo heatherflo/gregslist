@@ -4,7 +4,7 @@ class App {
 
   router = router
 
-  banana = 'sandwich'
+
 
 }
 
