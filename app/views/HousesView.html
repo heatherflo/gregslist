@@ -1,14 +1,71 @@
 <section class="container-fluid">
+  <div>
+    <h2 class="text-center mt-4 mb-4">HOUSE PAGE</h2>
+  </div>
   <div class="row" id="houses-list">
-    <div class="col-3" class="card text-center">Name | Description | Bedrooms | Bathrooms</div>
+    <div class="col-3" class="card fs-4 text-center">Name | Description | Bedrooms | Bathrooms</div>
 
     <!-- HOUSE TEMPLATE -->
-    <div class="col-3">
-    </div>
-
-    <div class="col-3"></div>
-    <div class="col-3"></div>
 
   </div>
+
+
+  <form onsubmit="app.HousesController.createHouse()" class="row bg-white shadow mb-5 rounded">
+    <div class="col-12 text-center my-2">Sell your House</div>
+    <div class="mb-3 col-4">
+      <label for="house-name">Street Name</label>
+      <input class="form-control" id="house-name" required name="name" type="text" minlength="3" maxlength="20"
+        placeholder="Street Name...">
+    </div>
+    <div class="mb-3 col-4">
+      <label for="house-description">Description</label>
+      <input class="form-control" id="house-description" required name="description" type="text" minlength="3"
+        maxlength="200" placeholder="Tell me about your house ...">
+    </div>
+    <div class="mb-3 col-4">
+      <label for="house-year">Year</label>
+      <input class="form-control" id="house-year" required name="year" type="number" min="1900" max="2024" value="2023">
+    </div>
+    <div class="mb-3 col-4">
+      <label for="house-price">Price [1-100000000000]</label>
+      <input class="form-control" id="house-price" name="price" type="text" min="1" max="100000000000" step="10"
+        value="$">
+    </div>
+    <div class="mb-3 col-8">
+      <label for="house-image">Picture of House</label>
+      <input class="form-control" id="house-image" required name="imgUrl" type="url" maxlength="500"
+        placeholder="https://...">
+    </div>
+    <div class="mb-3 col-6">
+      <label for="house-bedrooms">Bedrooms</label>
+      <input class="form-control" id="house-bedrooms" name="#Bedrooms" type="number" min="1" max="6" step="1" value="0">
+    </div>
+    <div class="mb-3 col-6">
+      <label for="house-bathrooms">Bathrooms</label>
+      <input class="form-control" id="house-bathrooms" name="#Bathrooms" type="number" min="1" max="5" step="1"
+        value="0">
+    </div>
+    <div class="mb-3 col-6">
+      <label for="sqft">How many sq feet?</label>
+      <input class="form-control" id="sqft" name="#sq feet" type="number" min="1" max="6000" step="50" value="1500">
+    </div>
+    <div class="mb-3 col-6">
+      Does your house need construction?
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Yes
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          No
+        </label>
+      </div>
+
+    </div>
+
+    <div class="mb-2 col-12 text-end">
 
 </section>

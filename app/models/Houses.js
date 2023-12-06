@@ -13,6 +13,7 @@ export class House {
     this.price = data.price
     this.description = data.description
     this.imgUrl = data.imgUrl
+    this.needsConstruction = data.needsConstruction
   }
 
 
