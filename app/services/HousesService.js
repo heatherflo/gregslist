@@ -8,6 +8,7 @@ class HouseService {
     console.log('created a house', createdHouse)
     AppState.houses.push(createdHouse)
     this.saveHouses()
+
   }
 
 
@@ -15,7 +16,7 @@ class HouseService {
     saveState('houses', AppState.houses)
   }
   loadHouses() {
-    let loadedHouses = loadState('houses', [House]) // the [] tell loadState we ar pulling out an array, with 'Car's inside
+    let loadedHouses = loadState('houses', [House])
     AppState.houses = loadedHouses
   }
 
