@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js"
-
+import { houseService } from "../services/HousesService.js"
+import { getFormData } from "../utils/FormHandler.js"
 
 export class HousesController {
   constructor() {
@@ -15,9 +16,16 @@ export class HousesController {
     houses.forEach(house => content += house.houseCard)
     document.getElementById('houses-list').innerHTML = content
   }
-  createHouse() {
-    // event.preventDefault()
+  createdHouse() {
+    event.preventDefault()
     console.log('create a house', '🏠')
+    const form = event.target
+    const formData = getFormData()
+    formData.price = parseInt(formData.price)
+    formData.year = parseInt(formData.year)
+    houseService.createHouse(formData)
+    // @ts-ignore
+    form.reset()
   }
 
 
